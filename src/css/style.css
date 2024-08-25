@@ -1,0 +1,275 @@
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    margin: 0;
+}
+
+main {
+    width: 100%;
+    overflow: hidden;
+    background-image: linear-gradient(rgba(33, 33, 56, 0.1), rgba(126, 126, 126, 0.1)), url('../../assets/image/imgen1.jpeg');
+    min-height: 120vh;
+    object-fit: cover;
+    background-size: cover;
+    background-position: top;
+}
+
+h5 {
+    color: rgb(81, 96, 128);
+}
+
+h3 {
+    color: rgb(6, 8, 10);
+    margin: 0;
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+    top: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.subtitulo {
+    font-size: 15px;
+    color: rgb(81, 96, 128);
+}
+
+.logo {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.container {
+    padding: 20px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    place-items: center;
+    margin: 20px;
+}
+
+
+.titulo {
+    display: block;
+    text-align: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+
+.card {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    color: rgb(8, 23, 57);
+    background-color: rgba(255, 255, 255, 0.60);
+}
+
+.card-header {
+    text-align: center;
+    flex-direction: column;
+}
+
+#hotel-card {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.img-hotel {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 26px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slide {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    padding: 8px;
+    color: #fff;
+}
+
+.slide:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 40px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slide {
+    background-color: #8CE196;
+    padding-left: 40px;
+}
+
+input:focus+.slide {
+    box-shadow: 0 0 1px #01aeed;
+}
+
+input:checked+.slide:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+    left: -20px;
+}
+
+.slide.round {
+    border-radius: 34px;
+}
+
+.slide.round:before {
+    border-radius: 50%;
+}
+
+.info-text {
+    font-size: 12px;
+    color: #38385e;
+}
+
+.fecha-selector-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 5px;
+    align-items: center;
+}
+
+#fecha-input {
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    color: #333;
+    font-size: 14px;
+    background-color: transparent;
+}
+
+.selected-fecha {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.fecha-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.fecha-text {
+    flex: 1;
+    font-size: 14px;
+    color: #333;
+}
+
+.remove-button {
+    background: none;
+    border: none;
+    color: #d9534f;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-reserva {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: rgba(6, 6, 68, 0.6);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.button-reserva:hover {
+    background-color: rgba(9, 9, 106, 0.8);
+    ;
+}
+
+.button-reserva:active {
+    background-color: #004494;
+    transform: scale(0.98);
+}
+
+.button-reserva:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(38, 143, 255, 0.5);
+}
+
+.nombre-hotel {
+    font-size: 20px;
+    font-style: oblique;
+}
+
+.hide {
+    display: none;
+}
+
+.stars {
+    color: rgb(188, 163, 19);
+    font-size: 25px;
+}
+
+#hotel-list {
+    gap: 10px; 
+    flex-direction: column
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Proyecto JavaScript</title>
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+
+<body>
+    <!-- <div class="header"> 
+        <img src="assets/image/logo.png" class="logo">
+    </div> -->
+    <main>
+        <div class="container">
+            <section id="section-reserva">
+                <form id="reserva-form" class="card">
+                    <h1 class="titulo">Buscar Hoteles</h1>
+
+                    <div>
+                        <span class="tipoCliente-label"><b>¿Programa de Recompensa?</b> Si</span>
+                        <label class="switch">
+                            <input type="checkbox" id="tipoCliente">
+                            <span class="slide round"></span>
+                        </label>
+                        <label>No</label><br>
+                        <label class="info-text">Programa de recompensas ofrece descuentos exclusivos, promociones
+                            especiales y más beneficios.</label>
+                    </div>
+
+                    <div class="fecha-selector-container">
+                        <label><b>Fecha</b></label>
+                        <input type="date" id="fecha-input">
+                    </div>
+                    <div id="selected-fecha" class="selected-fecha">
+                    </div>
+
+                    <div class="button-container">
+                        <button id="button-reserva" class="button-reserva">Buscar</button>
+                    </div>
+                </form>
+            </section>
+            <section id="hotel-list" class="hide"> 
+                <div class="card">
+                    <h3 class="nombre-hotel text-center">Hotel mas recomendado  </h3>
+                    <div id="hotel-card"></div>
+                </div>
+                <div class="card" id="otraOpcion">
+                    <h3 class="text-center">Otras opciones  </h3> 
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer id="footer">
+
+    </footer>
+    <script src="src/js/script.js"></script>
+    <script src="src/js/hotel.js"></script>
+</body>
+
+</html>
